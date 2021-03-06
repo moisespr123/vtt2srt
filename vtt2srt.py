@@ -12,7 +12,7 @@ filename = sys.argv[1]
 vtt_text = ''
 
 try:
-    with io.open(filename, 'r') as f:
+    with io.open(filename, 'r', encoding='utf-8') as f:
         vtt_text = f.read()
 except:
     print('Could not open {}'.format(filename))
