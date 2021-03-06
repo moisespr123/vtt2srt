@@ -10,9 +10,10 @@ if len(sys.argv) < 2:
 
 filename = sys.argv[1]
 vtt_text = ''
+text_encoding='utf-8'
 
 try:
-    with io.open(filename, 'r', encoding='utf-8') as f:
+    with io.open(filename, 'r', encoding=text_encoding) as f:
         vtt_text = f.read()
 except:
     print('Could not open {}'.format(filename))
@@ -43,5 +44,5 @@ for n, line in enumerate(vtt_list):
 
 srt_text = '\n'.join(srt_list)
 srtfilename = filename + '.srt'
-with open(srtfilename, 'w') as f:
+with open(srtfilename, 'w', encoding=text_encoding) as f:
     f.write(srt_text)
