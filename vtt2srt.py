@@ -10,7 +10,7 @@ if len(sys.argv) < 2:
 
 filename = sys.argv[1]
 vtt_text = ''
-text_encoding='utf-8'
+text_encoding = 'utf-8'
 
 try:
     with io.open(filename, 'r', encoding=text_encoding) as f:
